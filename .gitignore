@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+server/node_modules/
+
+# Environment files
+.env
+backend/.env
+server/.env
+
+# Build outputs
+dist/
+build/
+.output/
+.vinxi/
+.tanstack/
+
+# Logs
+*.log
+/tmp/*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+*~

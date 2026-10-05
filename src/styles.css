@@ -1,0 +1,33 @@
+@import "tailwindcss" source(none);
+@import "./design-system/companion-library-764952/design-system/styles/theme.css";
+@source "../src";
+
+@layer base {
+  html { color-scheme: light; }
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    --color-canvas: #141b18;
+    --color-surface: #202a24;
+    --color-surface-sunken: #1a241e;
+    --color-border: #37483c;
+    --color-border-strong: #536655;
+    --color-ink: #edf3ed;
+    --color-ink-muted: #b6c7ba;
+    --color-ink-subtle: #a3b4a7;
+    --color-ink-inverse: #17211b;
+    --color-accent: #3f7a57;
+    --color-accent-soft: #304e3b;
+    --color-accent-strong: #a5d7b4;
+    --color-accent-ink: #edf3ed;
+    --color-success: #a5d7b4;
+    --color-success-soft: #304e3b;
+    --color-warning: #ebc88c;
+    --color-warning-soft: #493c2b;
+    --color-danger: #efaaa3;
+    --color-danger-soft: #513533;
+    --color-slot-free: #304e3b;
+    --color-slot-free-edge: #628c6e;
+    --color-slot-occupied: #a5d7b4;
+    --color-slot-occupied-edge: #79ac88;
+  }
+}
