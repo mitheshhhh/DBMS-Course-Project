@@ -1,11 +1,16 @@
 #!/bin/bash
 
+# Load MySQL password from backend/.env if available
+if [ -f /Users/mithu/Downloads/pkg/backend/.env ]; then
+    export $(grep "^DB_PASSWORD=" /Users/mithu/Downloads/pkg/backend/.env | xargs)
+fi
+
 echo "🚀 Starting Smart Parking Management System..."
 echo ""
 
 # Check MySQL
 echo "📊 Checking MySQL..."
-if ! mysql -u root -pMithu-2007 -e "SELECT 1" &>/dev/null; then
+if ! mysql -u root -p"${DB_PASSWORD}" -e "SELECT 1" &>/dev/null; then
     echo "❌ MySQL is not running. Starting MySQL..."
     brew services start mysql 2>/dev/null || {
         echo "⚠️  Could not start MySQL automatically."
@@ -16,7 +21,7 @@ if ! mysql -u root -pMithu-2007 -e "SELECT 1" &>/dev/null; then
 fi
 
 # Verify database exists
-if ! mysql -u root -pMithu-2007 -e "USE smart_parking_db" &>/dev/null; then
+if ! mysql -u root -p"${DB_PASSWORD}" -e "USE smart_parking_db" &>/dev/null; then
     echo "❌ Database 'smart_parking_db' not found!"
     exit 1
 fi

@@ -8,7 +8,7 @@ cd /Users/mithu/Downloads/pkg
 ```
 
 This will:
-- ✅ Check MySQL connection (password: Mithu-2007)
+- ✅ Check MySQL connection
 - ✅ Start Backend on http://localhost:4000
 - ✅ Start Frontend on http://localhost:8080
 - ✅ Verify everything is working
@@ -44,7 +44,7 @@ Once started:
 ## System Requirements
 
 - MySQL running with database: `smart_parking_db`
-- MySQL password: `Mithu-2007`
+- MySQL user: `root` with appropriate password
 - Ports 4000 and 8080 available
 
 ## Features Available
